@@ -82,6 +82,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 npm i express dotenv mongoose bcryptjs
 npm i -D nodemon
+npm install --save express-async-handler           // from https://github.com/Abazhenov/express-async-handler
 
 ***I manually updated the package.json to help me keep things separate (see below for snippet from package.json)
 
@@ -92,5 +93,5 @@ npm i -D nodemon
 
 
     <terminal commands>
-    npm start 
+    npm start
     npm run server
