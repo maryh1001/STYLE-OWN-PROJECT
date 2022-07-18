@@ -68,3 +68,29 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+
+
+*** Coder Connect Installed Dependencies***
+  - express
+  - dotenv
+  - mongoose
+  - nodemon
+  - bcryptjs
+
+npm i express dotenv mongoose bcryptjs
+npm i -D nodemon
+
+***I manually updated the package.json to help me keep things separate (see below for snippet from package.json)
+
+"scripts": {
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js",
+
+
+
+    <terminal commands>
+    npm start 
+    npm run server
