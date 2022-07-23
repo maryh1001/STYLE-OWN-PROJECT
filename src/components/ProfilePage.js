@@ -2,7 +2,9 @@ const React = require("react");
 
 function ProfilePage() {
     return (
-       <main></main> 
+       <main>
+        
+       </main> 
     );
 }
 

@@ -7,14 +7,18 @@ import Error404 from './components/Error404';
 
 function App() {
   return (
-    <BrowserRouter> 
+    <BrowserRouter>
     <Navigation />
-    <Routes>
-      <Route exact path="/" component={HomeFeed}/>
-      <Route exact path="/profile" component={ProfilePage}/>
-      <Route path="/" component={Error404} />
-    </Routes>
+    <ProfilePage /> 
     </BrowserRouter>
+    // <BrowserRouter> 
+    // <Navigation />
+    // <Routes>
+    //   <Route exact path="/" component={HomeFeed}/>
+    //   <Route exact path="/profile" component={ProfilePage}/>
+    //   <Route path="/" component={Error404} />
+    // </Routes>
+    // </BrowserRouter>
   );
 }
 
