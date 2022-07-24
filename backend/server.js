@@ -8,23 +8,14 @@ const app = express()
 // Connect to database
 connectDB()
 
-
 // Middleware
 app.use(express.json())
 app.use(express.urlencoded({extended: false}))
 
 
-app.get('/', (req, res) => {
-  res.status(200).send('Hello World')
-  // verified on postman that this route is successful!
-})
-
-
 // Routes
 app.use('/api/users', require('./routes/userRoutes'))
-
 app.use(errorHandler)
-
 
 // WILDCARD ROUTE
 // app.get('*', (req, res) => {
@@ -32,5 +23,9 @@ app.use(errorHandler)
 // })
 
 
+app.get('/', (req, res) => {
+  res.status(200).send('Hello World')
+  // verified on postman that this route is successful!
+})
 
 app.listen(PORT, () => console.log(`Backend Server Running on port ${PORT}! ✨😁✨`))

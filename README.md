@@ -79,6 +79,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
   - mongoose
   - nodemon
   - bcryptjs
+  - jsonwebtoken
 
 npm i express dotenv mongoose bcryptjs
 npm i -D nodemon
@@ -95,3 +96,12 @@ npm install --save express-async-handler           // from https://github.com/Ab
     <terminal commands>
     npm start
     npm run server
+
+
+*** 7/23/2022 11:18 ***
+Completed authentication api where we can:
+  - login users
+  - register
+  - get web tokens
+  - protected routes
+  - get currently logged in user data

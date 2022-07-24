@@ -1,6 +1,9 @@
 const asyncHandler = require('express-async-handler')
 // please reference https://github.com/Abazhenov/express-async-handler for documentation
 const bcrypt = require('bcryptjs')
+const jwt = require ('jsonwebtoken')
+
+
 const User = require('../models/userModel')
 
 
@@ -13,7 +16,7 @@ const registerUser = asyncHandler(async(req, res) => {
 
 
   // VALIDATION
-  // I covered this in an online course back in backend but can't remember which one, please reference: https://expressjs.com/en/guide/error-handling.html
+  // I covered this in an online course in backend but can't remember which one, please reference: https://expressjs.com/en/guide/error-handling.html
   
   if (!name || !email || !password) {
     // return res.status(400).json({ message: 'Please include all fields'})
@@ -44,7 +47,8 @@ const registerUser = asyncHandler(async(req, res) => {
     res.status(201).json({
       _id: user._id,
       name: user.name,
-      email: user.email
+      email: user.email,
+      token: generateToken(user._id)
       //still awaiting token
     })
   } else {
@@ -58,12 +62,47 @@ const registerUser = asyncHandler(async(req, res) => {
 // Login an existing user
 // @route   /api/users/login
 const loginUser = asyncHandler(async(req, res) => {
-  res.send('Login Route')
+  const {email, password} = req.body
+
+  const user = await User.findOne({email})
+  // Check user (to make sure user is found) and check that password matches. 
+  if (user && (await bcrypt.compare(password, user.password))) {
+  // This code compares the plain text password to the password hash using a method from bcrypt. Takes in two things (password, the hash from the database)
+    res.status(200).json({
+      _id: user._id,
+      name: user.name,
+      email: user.email,
+      token: generateToken(user._id)
+    })
+  } else {
+    res.status(401)
+    throw new Error('Invalid credentials')
+  }
 })
 
+
+// Get Current User
+// /api/users/me
+const getMe = asyncHandler(async(req, res) => {
+  const user = {
+    id: req.user._id,
+    email: req.user.email,
+    name: req.user.name
+  }
+  res.status(200).json(user)
+})
+
+
+// Generate JSON Web Token
+const generateToken = (id) => {
+  return jwt.sign({ id }, process.env.JWT_SECRET, {
+    expiresIn: '30d'
+  })
+}
 
 
 module.exports = {
   registerUser,
   loginUser,
+  getMe
 }
