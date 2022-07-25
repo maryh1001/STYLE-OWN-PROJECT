@@ -9,10 +9,10 @@ function ProfilePage() {
   <div class="row">
     <div class="col-sm-3 well">
       <div class="well">
-        <p>My Profile</p>
-        <h1>Name</h1>
-        <h3>Current Occupation</h3>
-        <h3>Education/Skill Level</h3>
+        <p class="profile">My Profile</p>
+        <h2 class="profile">Name</h2>
+        <h3 class="profile">Current Occupation</h3>
+        <h3 class="profile">Education/Skill Level</h3>
       </div>
       <div class="well">
         <p><a href="#">Discover Other Code!</a></p>
@@ -48,7 +48,7 @@ function ProfilePage() {
         </div>
         <div class="col-sm-9">
           <div class="well">
-            <p>describe project</p>
+            <p>To do: Updating the Routes</p>
           </div>
         </div>
       </div>
