@@ -1,60 +1,60 @@
-import { useState, useEffect } from 'react'
-import { toast } from 'react-toastify'
-import { useNavigate } from 'react-router-dom'
-import { FaSignInAlt } from 'react-icons/fa'
-import { useSelector, useDispatch } from 'react-redux'
-import { login, reset } from '../features/auth/authSlice'
-import Spinner from '../components/Spinner'
+import { useState, useEffect } from 'react';
+import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom';
+import { FaSignInAlt } from 'react-icons/fa';
+import { useSelector, useDispatch } from 'react-redux';
+import { login, reset } from '../features/auth/authSlice';
+import Spinner from '../components/Spinner';
 
 function Login() {
-  const [ formData, setFormData ] = useState({
+  const [formData, setFormData] = useState({
     email: '',
     password: '',
-  })
+  });
 
-  const { email, password } = formData
+  const { email, password } = formData;
 
-  const dispatch = useDispatch()
-  const navigate = useNavigate()
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   // useSelector
   const { user, isLoading, isError, isSuccess, message } = useSelector(
     (state) => state.auth
-  )
+  );
 
   useEffect(() => {
     if (isError) {
-      toast.error(message)
+      toast.error(message);
     }
 
     // Redirect when logged in
     if (isSuccess || user) {
-      navigate('/')
+      navigate('/');
     }
 
-    dispatch(reset())
-  }, [ isError, isSuccess, user, message, navigate, dispatch ])
+    dispatch(reset());
+  }, [isError, isSuccess, user, message, navigate, dispatch]);
 
   const onChange = (e) => {
     setFormData((prevState) => ({
       ...prevState,
       [e.target.name]: e.target.value,
-    }))
-  }
+    }));
+  };
 
   const onSubmit = (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
     const userData = {
       email,
       password,
-    }
+    };
 
-    dispatch(login(userData))
-  }
+    dispatch(login(userData));
+  };
 
   if (isLoading) {
-    return <Spinner />
+    return <Spinner />;
   }
 
   return (
@@ -67,7 +67,7 @@ function Login() {
       </section>
 
       <section className='form'>
-        <form onSubmit={ onSubmit }>
+        <form onSubmit={onSubmit}>
           <div className='form-group'>
             <input
               type='email'
@@ -98,7 +98,7 @@ function Login() {
         </form>
       </section>
     </>
-  )
+  );
 }
 
 export default Login;
