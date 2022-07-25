@@ -1,7 +1,7 @@
 const path = require('path');
 const express = require('express');
 const dotenv = require('dotenv').config();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 4000;
 const { errorHandler } = require('./middleware/errorMiddleware');
 const connectDB = require('./config/db');
 
