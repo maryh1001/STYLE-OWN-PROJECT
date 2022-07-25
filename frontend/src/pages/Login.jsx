@@ -7,7 +7,7 @@ import { login, reset } from '../features/auth/authSlice'
 import Spinner from '../components/Spinner'
 
 function Login() {
-  const [formData, setFormData] = useState({
+  const [ formData, setFormData ] = useState({
     email: '',
     password: '',
   })
@@ -33,7 +33,7 @@ function Login() {
     }
 
     dispatch(reset())
-  }, [isError, isSuccess, user, message, navigate, dispatch])
+  }, [ isError, isSuccess, user, message, navigate, dispatch ])
 
   const onChange = (e) => {
     setFormData((prevState) => ({
@@ -67,7 +67,7 @@ function Login() {
       </section>
 
       <section className='form'>
-        <form onSubmit={onSubmit}>
+        <form onSubmit={ onSubmit }>
           <div className='form-group'>
             <input
               type='email'
@@ -101,4 +101,4 @@ function Login() {
   )
 }
 
-export default Login
+export default Login;

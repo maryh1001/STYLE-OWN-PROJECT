@@ -62,9 +62,9 @@ const registerUser = asyncHandler(async(req, res) => {
 // Login an existing user
 // @route   /api/users/login
 const loginUser = asyncHandler(async(req, res) => {
-  const {email, password} = req.body
+  const { email, password } = req.body
 
-  const user = await User.findOne({email})
+  const user = await User.findOne({ email })
   // Check user (to make sure user is found) and check that password matches. 
   if (user && (await bcrypt.compare(password, user.password))) {
   // This code compares the plain text password to the password hash using a method from bcrypt. Takes in two things (password, the hash from the database)

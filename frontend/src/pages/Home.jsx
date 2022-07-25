@@ -5,8 +5,8 @@ function Home() {
   return (
     <>
       <section className='heading'>
-        <h1>Code. Connect. Create.</h1>
-        <p>What is your focus for today?</p>
+        <h1>CoderConnect</h1>
+        <p>Create a developer profile/portfolio, share posts, and get help from other developers</p>
       </section>
         
         <Link to='/profile' className='btn btn-reverse btn-block'>
@@ -22,4 +22,4 @@ function Home() {
   )
 }
 
-export default Home
+export default Home;
