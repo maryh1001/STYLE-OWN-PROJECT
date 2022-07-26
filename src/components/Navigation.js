@@ -8,8 +8,8 @@ function Navigation() {
       <button class="navbar-brand" type="button">Coder Connect</button>
     </div>
     <ul class="nav navbar-nav">
-      <li><button type="button">Home</button></li>
-      <li><button type="button">another page</button></li>
+      <li>Home</li>
+      <li>another page</li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li><button><span class="glyphicon glyphicon-user"></span> Sign Up</button></li>
