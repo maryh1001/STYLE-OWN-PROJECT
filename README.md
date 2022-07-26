@@ -69,39 +69,78 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
+**_ Coder Connect Installed Dependencies_**
 
-
-
-
-*** Coder Connect Installed Dependencies***
-  - express
-  - dotenv
-  - mongoose
-  - nodemon
-  - bcryptjs
-  - jsonwebtoken
+- express
+- dotenv
+- mongoose
+- nodemon
+- bcryptjs
+- jsonwebtoken
 
 npm i express dotenv mongoose bcryptjs
 npm i -D nodemon
-npm install --save express-async-handler           // from https://github.com/Abazhenov/express-async-handler
+npm install --save express-async-handler // from https://github.com/Abazhenov/express-async-handler
 
-***I manually updated the package.json to help me keep things separate (see below for snippet from package.json)
+\*\*\*I manually updated the package.json to help me keep things separate (see below for snippet from package.json)
 
 "scripts": {
-    "start": "node backend/server.js",
-    "server": "nodemon backend/server.js",
-
-
+"start": "node backend/server.js",
+"server": "nodemon backend/server.js",
 
     <terminal commands>
     npm start
     npm run server
 
-
-*** 7/23/2022 11:18 ***
+**_ 7/23/2022 11:18 _**
 Completed authentication api where we can:
-  - login users
-  - register
-  - get web tokens
-  - protected routes
-  - get currently logged in user data
+
+- login users
+- register
+- get web tokens
+- protected routes
+- get currently logged in user data
+
+# Project Coder Connect
+
+#### Coder Connect is an app where users can create a developer profile/portfolio, share posts, and get help from other developers.
+
+## Planning
+
+#### User Stories
+
+#### TBD
+
+#### Wireframes
+
+#### TBD
+
+😉
+
+## Routes
+
+| Method | Path        | Purpose                                        |
+| :----- | :---------- | :--------------------------------------------- |
+| GET    | `/`         | Home Page                                      |
+| GET    | `/login`    | Login Page                                     |
+| POST   | `/register` | Register                                       |
+| GET    | `/____/`    |                                                |
+| GET    | `/____/`    |                                                |
+| PUT    | `/____/`    |                                                |
+| GET    | `/____/`    |                                                |
+| DELETE | `/____/`    |                                                |
+| POST   | `/____/`    |                                                |
+| DELETE | `/____/`    |                                                |
+| GET    | `*`         | 404 page (matches any route not defined above) |
+
+## Database
+
+#### Places
+
+| Field    | Type   |
+| :------- | :----- |
+| Name     | string |
+| City     | string |
+| State    | string |
+| Cuisines | string |
+| pic      | string |
