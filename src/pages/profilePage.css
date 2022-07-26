@@ -1,0 +1,25 @@
+.container text-center{
+    background-color: white;
+}
+.p,h1,h2,h3{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+  margin-bottom: 10px;
+}
+a {
+    text-decoration: none;
+    color: #000;
+  }
+  .col-sm-7{
+    border: white;
+  }
+  .col-sm-2 well{
+    border:#000;
+  }
+  .col-sm-3 well{
+    border:#000;
+  }
+  .profile{
+    text-align: left;
+  }
+  
