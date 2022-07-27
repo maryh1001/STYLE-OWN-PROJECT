@@ -77,6 +77,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - nodemon
 - bcryptjs
 - jsonwebtoken
+- toastify
 
 npm i express dotenv mongoose bcryptjs
 npm i -D nodemon
