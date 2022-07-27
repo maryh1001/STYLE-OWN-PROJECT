@@ -87,13 +87,10 @@ npm install --save express-async-handler // from https://github.com/Abazhenov/ex
 "scripts": {
 "start": "node backend/server.js",
 "server": "nodemon backend/server.js",
-"dev": "concurrently \"npm run server\" \"npm run client\"",
-"heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
 
     <terminal commands>
     npm start
     npm run server
-    ***npm run dev*** (this is the one we want!)
 
 **_ 7/23/2022 11:18 _**
 Completed authentication api where we can:
