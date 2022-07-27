@@ -12,18 +12,18 @@ const { protect } = require('../middleware/authMiddleware');
 // router.post('/register', (req, res) => {
 //   res.send('Register New User Route')
 // })
-router.post('/', registerUser);
 
 // Login
 // router.post('/login', (req, res) => {
 //   res.send('Login Route')
 // })
 
-router.post('/login', loginUser);
-router.get('/me', protect, getMe);
+// Register New User
+router.post('/', registerUser);
 
-// router.post('/profile', (req, res) => {
-//   res.send('profile page')
-// })
+// Login User
+router.post('/login', loginUser);
+
+router.get('/me', protect, getMe);
 
 module.exports = router;
