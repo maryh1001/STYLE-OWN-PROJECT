@@ -23,6 +23,17 @@ const login = async (userData) => {
   return response.data
 }
 
+// user profile
+// const profile = async (userData) => {
+//   const response = await axios.post(API_URL + 'profile', userData)
+
+//   if (response.data) {
+//     localStorage.setItem('user', JSON.stringify(response.data))
+//   }
+//   return response.data
+// }
+
+
 // Logout user
 const logout = () => localStorage.removeItem('user')
 

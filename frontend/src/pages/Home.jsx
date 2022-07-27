@@ -1,25 +1,36 @@
-import { Link } from 'react-router-dom'
-import { FaAddressCard, FaCouch, FaGithubSquare } from 'react-icons/fa'
+import { FaUser, FaAddressCard, FaBookOpen, FaGithubSquare, FaChess } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 function Home() {
   return (
     <>
       <section className='heading'>
-        <h1>CoderConnect</h1>
-        <p>Create a developer profile/portfolio, share posts, and get help from other developers</p>
+        <h1>Welcome to CoderConnect!</h1>
+        <hr />
+        <br />
+        <p>
+          Create a developer profile/portfolio, share posts, and get help from
+          other developers
+        </p>
       </section>
-        
-        <Link to='/profile' className='btn btn-reverse btn-block'>
-          <FaAddressCard /> Profile
-        </Link>
-        <Link to='/lounge' className='btn btn-reverse btn-block'>
-          <FaCouch /> Lounge
-        </Link>
-        <Link to='/git-hub' className='btn btn-reverse btn-block'>
-          <FaGithubSquare /> GitHub
-        </Link>
+
+      <Link to='/profile' className='btn btn-reverse btn-block'>
+        <FaUser /> Profile
+      </Link>
+      <Link to='/about' className='btn btn-reverse btn-block'>
+        <FaBookOpen /> About
+      </Link>
+      <Link to='/skills' className='btn btn-reverse btn-block'>
+        <FaChess /> Skills
+      </Link>
+      <Link to='/projects' className='btn btn-reverse btn-block'>
+        <FaGithubSquare /> Projects
+      </Link>
+      <Link to='/contact' className='btn btn-reverse btn-block'>
+        <FaAddressCard /> Contact
+      </Link>
     </>
-  )
+  );
 }
 
 export default Home;

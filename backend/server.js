@@ -17,7 +17,11 @@ app.use(express.urlencoded({ extended: false }));
 
 // Routes
 app.use('/api/users', require('./routes/userRoutes'));
+app.use('/api/profile', require('./routes/profileRoutes'));
+
+
 app.use(errorHandler);
+
 
 // Server Frontend
 if (process.env.NODE_ENV === 'production') {
