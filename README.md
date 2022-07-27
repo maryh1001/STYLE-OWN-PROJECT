@@ -119,19 +119,20 @@ Completed authentication api where we can:
 
 ## Routes
 
-| Method | Path        | Purpose                                        |
-| :----- | :---------- | :--------------------------------------------- |
-| GET    | `/`         | Home Page                                      |
-| GET    | `/login`    | Login Page                                     |
-| POST   | `/register` | Register                                       |
-| GET    | `/____/`    |                                                |
-| GET    | `/____/`    |                                                |
-| PUT    | `/____/`    |                                                |
-| GET    | `/____/`    |                                                |
-| DELETE | `/____/`    |                                                |
-| POST   | `/____/`    |                                                |
-| DELETE | `/____/`    |                                                |
-| GET    | `*`         | 404 page (matches any route not defined above) |
+| Method | Path                | Purpose                                        |
+| :----- | :------------------ | :--------------------------------------------- |
+| GET    | `/`                 | Home Page                                      |
+| GET    | `/login`            | Login Page                                     |
+| POST   | `/register`         | Register                                       |
+| GET    | `/profile`          | User Profiles                                  |
+| GET    | `/profile/:id`      | My Profile                                     |
+| GET    | `/forum/`           | Access forum                                   |
+| GET    | `/forum/:id`        | Access specific forum post                     |
+| PUT    | `/forum/:id`        | Edit specific forum post                       |
+| DELETE | `/forum/:id/delete` | Delete Post                                    |
+| POST   | `/forum/:id/post`   | Post on forum                                  |
+| DELETE | `/____/`            |                                                |
+| GET    | `*`                 | 404 page (matches any route not defined above) |
 
 ## Database
 
