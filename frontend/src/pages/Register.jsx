@@ -7,7 +7,7 @@ import { register, reset } from '../features/auth/authSlice';
 import Spinner from '../components/Spinner';
 
 function Register() {
-  const [ formData, setFormData ] = useState({
+  const [formData, setFormData] = useState({
     name: '',
     email: '',
     password: '',
@@ -34,12 +34,12 @@ function Register() {
       }
 
       dispatch(reset());
-    }, [ isError, isSuccess, user, message, navigate, dispatch ]);
+    }, [isError, isSuccess, user, message, navigate, dispatch]);
 
   const onChange = (e) => {
     setFormData((prevState) => ({
       ...prevState,
-      [ e.target.name ]: e.target.value,
+      [e.target.name]: e.target.value,
     }))
   }
 
@@ -73,15 +73,15 @@ function Register() {
       </section>
 
       <section className='form'>
-        <form onSubmit={ onSubmit }>
+        <form onSubmit={onSubmit}>
           <div className="form-group">
             <input 
               type='text'
               className='form-control'
               id='name'
               name='name'
-              value={ name }
-              onChange={ onChange }
+              value={name}
+              onChange={onChange}
               placeholder='Enter your name'
               required
             />
@@ -92,8 +92,8 @@ function Register() {
               className='form-control'
               id='email'
               name='email'
-              value={ email }
-              onChange={ onChange }
+              value={email}
+              onChange={onChange}
               placeholder='Enter your email'
               required
             />
@@ -104,8 +104,8 @@ function Register() {
               className='form-control'
               id='password'
               name='password'
-              value={ password }
-              onChange={ onChange }
+              value={password}
+              onChange={onChange}
               placeholder='Enter your password'
               required
             />
@@ -116,8 +116,8 @@ function Register() {
               className='form-control'
               id='password2'
               name='password2'
-              value={ password2 }
-              onChange={ onChange }
+              value={password2}
+              onChange={onChange}
               placeholder='Confirm Password'
               required
             />
