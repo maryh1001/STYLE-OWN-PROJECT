@@ -1,5 +1,5 @@
 # Welcome to CoderConnect
-This social media site was designed with coders in mind. Creating a profile is free and easy; users showcase their best projects on their CoderConnect profile via a connection to their GitHub account. Users display a bio, which contains information on what area of programming interests them, the coding languages in which they are proficient, and any other relevant programmer info, such as how many times they had to console.log() `Hello World!` before they could get a job.
+This social media site was designed with coders in mind. Creating a profile is free and easy; users showcase their best projects on their CoderConnect profile via a connection to their GitHub account. Users display a bio, which contains information on what area of programming interests them, the coding languages in which they are proficient, and any other relevant programmer info, such as how many times they had to console.log(`Hello World!`) before they could get a job.
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -38,38 +38,38 @@ Completed authentication api where we can:
 
 ## Dependencies
 Frontend:
--"@reduxjs/toolkit": "^1.8.3",
--"@testing-library/jest-dom": "^5.16.4",
--"@testing-library/react": "^13.3.0",
--"@testing-library/user-event": "^14.3.0",
--"axios": "^0.27.2",
--"react": "^18.2.0",
--"react-dom": "^18.2.0",
--"react-icons": "^4.4.0",
--"react-modal": "^3.15.1",
--"react-redux": "^8.0.2",
--"react-router-dom": "^6.3.0",
--"react-scripts": "5.0.1",
--"react-toastify": "^9.0.7",
--"web-vitals": "^2.1.4"
+- "@reduxjs/toolkit": "^1.8.3",
+- "@testing-library/jest-dom": "^5.16.4",
+- "@testing-library/react": "^13.3.0",
+- "@testing-library/user-event": "^14.3.0",
+- "axios": "^0.27.2",
+- "react": "^18.2.0",
+- "react-dom": "^18.2.0",
+- "react-icons": "^4.4.0",
+- "react-modal": "^3.15.1",
+- "react-redux": "^8.0.2",
+- "react-router-dom": "^6.3.0",
+- "react-scripts": "5.0.1",
+- "react-toastify": "^9.0.7",
+- "web-vitals": "^2.1.4"
   
 
 Backend:
--"@testing-library/jest-dom": "^5.16.4",
--"@testing-library/react": "^13.3.0",
--"@testing-library/user-event": "^13.5.0",
--"bcryptjs": "^2.4.3",
--"colors": "^1.4.0",
--"concurrently": "^7.3.0",
--"dotenv": "^16.0.1",
--"express": "^4.18.1",
--"express-async-handler": "^1.2.0",
--"jsonwebtoken": "^8.5.1",
--"mongoose": "^6.4.4",
--"react": "^18.2.0",
--"react-dom": "^18.2.0",
--"react-scripts": "5.0.1",
--"web-vitals": "^2.1.4"
+- "@testing-library/jest-dom": "^5.16.4",
+- "@testing-library/react": "^13.3.0",
+- "@testing-library/user-event": "^13.5.0",
+- "bcryptjs": "^2.4.3",
+- "colors": "^1.4.0",
+- "concurrently": "^7.3.0",
+- "dotenv": "^16.0.1",
+- "express": "^4.18.1",
+- "express-async-handler": "^1.2.0",
+- "jsonwebtoken": "^8.5.1",
+- "mongoose": "^6.4.4",
+- "react": "^18.2.0",
+- "react-dom": "^18.2.0",
+- "react-scripts": "5.0.1",
+- "web-vitals": "^2.1.4"
 
 
 ## Routes
@@ -85,11 +85,13 @@ Backend:
 | GET    | `*`                 | 404 page (matches any route not defined above) |
 
 #### To be implemented:
-| GET    | `/forum/`           | Access forum                                   |
-| GET    | `/forum/:id`        | Access specific forum post                     |
-| PUT    | `/forum/:id`        | Edit specific forum post                       |
-| DELETE | `/forum/:id/delete` | Delete Post                                    |
-| POST   | `/forum/:id/post`   | Post on forum                                  |
+| Method | Path                  | Purpose                                        |
+| :----- | :-------------------- | :--------------------------------------------- |
+| GET    | `/homefeed/`          | Access homefeed                                |
+| GET    | `/homefeed/:id`       | Access specific post on homefeed               |
+| PUT    | `/homefeed/:id`       | Edit specific homefeed post (if own post)      |
+| DELETE | `/homefeed/:id/delete`| Delete Post (if own post)                      |
+| POST   | `/homefeed/:id/post`  | Post on homefeed                               |
 
 
 ## Future Implementation
