@@ -4,7 +4,7 @@ This social media site was designed with coders in mind. Creating a profile is f
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Components
+## Pages
 This project is broken up into the components listed below. These React components all come together in the App.js file inside a function that correctly routes the user to the corresponding page.
 
 
