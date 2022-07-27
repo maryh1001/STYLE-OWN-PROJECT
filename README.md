@@ -13,7 +13,7 @@ A simple page to prompt the user to log in or create an account to use CoderConn
 
 
 ### `Home Feed`
-This page displays what other CoderConnect users are posting. Users stay updated on what their connections are up to, new trends in tech, what companies have the best wfh policies, etc.
+This page displays what other CoderConnect users are posting. Users stay updated on what their connections are up to, new trends in tech, what companies have the best wfh policies, etc. This is a future feature as the code needs some tweaks.
 
 
 ### `Profile Page`
@@ -72,7 +72,6 @@ Backend:
 -"web-vitals": "^2.1.4"
 
 
-
 ## Routes
 
 | Method | Path                | Purpose                                        |
@@ -93,3 +92,5 @@ Backend:
 | POST   | `/forum/:id/post`   | Post on forum                                  |
 
 
+## Future Implementation
+The brainiacs at CoderConnect have a vision of a fully functional home feed that shows posts from users asking for coding help, posting programmer memes, job updates, and other statuses. The profiles need further personalization that grabs user data from a database, and the CSS also needs some spicing up. Other than that, this is a great base app for creative programmers to connect, share, and grow as a community.  
