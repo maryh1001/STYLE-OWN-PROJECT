@@ -5,7 +5,6 @@ const { errorHandler } = require('./middleware/errorMiddleware');
 const connectDB = require('./config/db');
 const PORT = process.env.PORT || 5000;
 
-
 // Connect to database
 connectDB();
 
@@ -19,9 +18,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use('/api/users', require('./routes/userRoutes'));
 app.use('/api/profile', require('./routes/profileRoutes'));
 
-
 app.use(errorHandler);
-
 
 // Server Frontend
 if (process.env.NODE_ENV === 'production') {
@@ -37,6 +34,6 @@ if (process.env.NODE_ENV === 'production') {
   });
 }
 
-app.listen(PORT, () => 
+app.listen(PORT, () =>
   console.log(`Backend Server Running on port ${PORT}! ✨😁✨`)
 );

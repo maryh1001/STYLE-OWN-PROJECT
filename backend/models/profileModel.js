@@ -4,36 +4,34 @@ const profileSchema = new mongoose.Schema({
   user: {
     type: mongoose.Schema.Types.ObjectId,
     required: true,
-    ref: 'user'
+    ref: 'user',
   },
   education: {
-    type: String
+    type: String,
   },
   company: {
-    type: String
+    type: String,
   },
   website: {
-    type: String
+    type: String,
   },
   location: {
-    type: String
+    type: String,
   },
   status: {
     type: String,
-    required: false
+    required: false,
   },
   skills: {
     type: String,
-    required: false
+    required: false,
   },
   bio: {
-    type: String
+    type: String,
   },
   githubusername: {
-    type: String
+    type: String,
   },
-  
-  }
-);
+});
 
 module.exports = mongoose.model('profile', profileSchema);

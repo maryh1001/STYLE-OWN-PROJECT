@@ -1,23 +1,19 @@
-import {
-  FaGithubSquare,
-  FaCouch,
-} from 'react-icons/fa';
+import { FaGithubSquare, FaCouch } from 'react-icons/fa';
 
 function Profile() {
   return (
     <>
       <section className='heading'>
-          
-          <h3>User Profile</h3>
-          <hr />
-          <p>About Me</p>
-          <br />
-          <h6>Software Development Student</h6>
-          <h6>NC State Software Development BootCamp</h6>
-        
+        <h3>User Profile</h3>
+        <hr />
+        <p>About Me</p>
+        <br />
+        <h6>Software Development Student</h6>
+        <h6>NC State Software Development BootCamp</h6>
+
         <div>
           <br />
-          
+
           <h3>Hello User!</h3>
           <hr />
           <p>What would you like to work on?</p>
@@ -39,7 +35,8 @@ function Profile() {
             className='btn btn-reverse btn-block'
           >
             <FaGithubSquare /> CoderConnect
-          </a><a
+          </a>
+          <a
             href='https://github.com/MGWr6/Milestone-Project-1'
             className='btn btn-reverse btn-block'
           >
@@ -57,7 +54,7 @@ function Profile() {
           >
             <FaGithubSquare /> CoderConnect
           </a>
-          </div>
+        </div>
         <br />
         <div>
           <h3>Discover Projects!</h3>
@@ -82,9 +79,9 @@ function Profile() {
             <FaGithubSquare /> CoderConnect
           </a>
           <br />
-          </div>
-        
-          <div>
+        </div>
+
+        <div>
           <h3>Study Lounge</h3>
           <hr />
           <br />
@@ -106,9 +103,8 @@ function Profile() {
           >
             <FaCouch /> Programmer's Hangout
           </a>
-          </div>
-          <br />
-        
+        </div>
+        <br />
       </section>
     </>
   );

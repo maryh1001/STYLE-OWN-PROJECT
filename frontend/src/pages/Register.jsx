@@ -20,49 +20,51 @@ function Register() {
   const navigate = useNavigate();
 
   // useSelector
-  const { user, isLoading, isError, isSuccess, message } = useSelector(({ auth }) => auth);
+  const { user, isLoading, isError, isSuccess, message } = useSelector(
+    ({ auth }) => auth
+  );
   // allows us to bring in any piece of our global state into a component using the useSelector hook
 
-    useEffect(() => {
-      if(isError) {
-        toast.error(message);
-      }
+  useEffect(() => {
+    if (isError) {
+      toast.error(message);
+    }
 
-      // Redirect when logged in
-      if(isSuccess || user) {
-        navigate('/');
-      }
+    // Redirect when logged in
+    if (isSuccess || user) {
+      navigate('/');
+    }
 
-      dispatch(reset());
-    }, [isError, isSuccess, user, message, navigate, dispatch]);
+    dispatch(reset());
+  }, [isError, isSuccess, user, message, navigate, dispatch]);
 
   const onChange = (e) => {
     setFormData((prevState) => ({
       ...prevState,
       [e.target.name]: e.target.value,
-    }))
-  }
+    }));
+  };
 
   const onSubmit = (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
-    if(password !== password2) {
-      toast.error('Passwords do not match')
+    if (password !== password2) {
+      toast.error('Passwords do not match');
     } else {
       const userData = {
         name,
         email,
-        password
-      }
+        password,
+      };
 
-      dispatch(register(userData))
+      dispatch(register(userData));
     }
+  };
+
+  if (isLoading) {
+    return <Spinner />;
   }
 
-  if(isLoading) {
-    return <Spinner />
-  }
-  
   return (
     <>
       <section className='heading'>
@@ -74,8 +76,8 @@ function Register() {
 
       <section className='form'>
         <form onSubmit={onSubmit}>
-          <div className="form-group">
-            <input 
+          <div className='form-group'>
+            <input
               type='text'
               className='form-control'
               id='name'
@@ -86,8 +88,8 @@ function Register() {
               required
             />
           </div>
-          <div className="form-group">
-            <input 
+          <div className='form-group'>
+            <input
               type='email'
               className='form-control'
               id='email'
@@ -98,8 +100,8 @@ function Register() {
               required
             />
           </div>
-          <div className="form-group">
-            <input 
+          <div className='form-group'>
+            <input
               type='password'
               className='form-control'
               id='password'
@@ -110,8 +112,8 @@ function Register() {
               required
             />
           </div>
-          <div className="form-group">
-            <input 
+          <div className='form-group'>
+            <input
               type='password'
               className='form-control'
               id='password2'
@@ -122,13 +124,13 @@ function Register() {
               required
             />
           </div>
-          <div className="form-group">
-            <button className="btn btn-block">Submit</button>
+          <div className='form-group'>
+            <button className='btn btn-block'>Submit</button>
           </div>
         </form>
       </section>
     </>
   );
-};
+}
 
 export default Register;

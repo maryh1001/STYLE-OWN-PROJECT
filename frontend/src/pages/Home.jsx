@@ -1,4 +1,10 @@
-import { FaUser, FaAddressCard, FaBookOpen, FaGithubSquare, FaChess } from 'react-icons/fa';
+import {
+  FaUser,
+  FaAddressCard,
+  FaBookOpen,
+  FaGithubSquare,
+  FaChess,
+} from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 function Home() {
