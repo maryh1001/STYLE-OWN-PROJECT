@@ -7,9 +7,11 @@ function Profile() {
         <h3>User Profile</h3>
         <hr />
         <p>About Me</p>
-        <br />
+        
         <h6>Software Development Student</h6>
         <h6>NC State Software Development BootCamp</h6>
+        <br />
+        <h6>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga accusantium praesentium voluptas, adipisci non debitis ducimus quasi aspernatur quo ad.</h6>
 
         <div>
           <br />
@@ -19,40 +21,40 @@ function Profile() {
           <p>What would you like to work on?</p>
           <br />
           <a
-            href='https://github.com/MGWr6/Milestone-Project-1'
+            href='https://github.com/MGWr6/My_Portfolio'
             className='btn btn-reverse btn-block'
           >
-            <FaGithubSquare /> Number Guesser
+            <FaGithubSquare /> My Portfolio
           </a>
           <a
-            href='https://github.com/MGWr6/react-a-mole'
+            href='https://github.com/MGWr6/CSS-Copy-Cat'
             className='btn btn-reverse btn-block'
           >
-            <FaGithubSquare /> React-a-Mole
-          </a>
-          <a
-            href='https://github.com/MGWr6/Coder_Connect'
-            className='btn btn-reverse btn-block'
-          >
-            <FaGithubSquare /> CoderConnect
+            <FaGithubSquare /> CSS Copy Cat Practice
           </a>
           <a
             href='https://github.com/MGWr6/Milestone-Project-1'
             className='btn btn-reverse btn-block'
           >
-            <FaGithubSquare /> Number Guesser
-          </a>
-          <a
-            href='https://github.com/MGWr6/react-a-mole'
-            className='btn btn-reverse btn-block'
-          >
-            <FaGithubSquare /> React-a-Mole
+            <FaGithubSquare /> JavaScript Number Guesser Game
           </a>
           <a
             href='https://github.com/MGWr6/Coder_Connect'
             className='btn btn-reverse btn-block'
           >
-            <FaGithubSquare /> CoderConnect
+            <FaGithubSquare /> Coder Connect
+          </a>
+          <a
+            href='https://github.com/MGWr6/complete-javascript-course'
+            className='btn btn-reverse btn-block'
+          >
+            <FaGithubSquare /> The Complete JavaScript Course
+          </a>
+          <a
+            href='https://github.com/MGWr6/JS-Interactive-Map'
+            className='btn btn-reverse btn-block'
+          >
+            <FaGithubSquare /> Interactive Map
           </a>
         </div>
         <br />
