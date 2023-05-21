@@ -1,0 +1,57 @@
+// Variables
+$primary-color: #ff0000;
+$secondary-color: #00ff00;
+// Add more variables as needed
+
+// Mixins
+@mixin border-radius($radius) {
+  border-radius: $radius;
+}
+
+@mixin box-shadow($x, $y, $blur, $color) {
+  box-shadow: $x $y $blur $color;
+}
+
+// Functions
+@function calculate-width($width) {
+  @return $width * 2;
+}
+
+@function capitalize-string($string) {
+  @return capitalize($string);
+}
+
+// Flow control directives or operators
+$condition: true;
+
+@if $condition {
+  body {
+    background-color: $primary-color;
+  }
+} @else {
+  body {
+    background-color: $secondary-color;
+  }
+}
+
+// Nested selectors
+.container {
+  background-color: $secondary-color;
+
+  &.highlighted {
+    background-color: $primary-color;
+  }
+
+  .child-element {
+    color: $primary-color;
+  }
+}
+
+// Partial files imported
+@import 'variables';
+@import 'mixins';
+@import 'functions';
+// Add more partial files as needed
+
+// Error handling directive
+@error "Something went wrong!";
